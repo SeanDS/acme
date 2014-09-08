@@ -73,15 +73,15 @@ You need to make a few changes:
 
 Example crontab entry for coffeemail.php:
 
-# Coffee/doughnut reminder emails
-0 3 * * * php /path/to/coffeemail.php >> coffeemail.log
+```# Coffee/doughnut reminder emails
+0 3 * * * php /path/to/coffeemail.php >> coffeemail.log```
 
 This runs daily at 3am (server time) and logs everything the script spits out to coffeemail.log.
 
 Example crontab entry for processpayments.php:
 
-# Coffee/doughnut transactions
-0 4 * * 0 php /path/to/processpayments.php >> processpayments.log
+```# Coffee/doughnut transactions
+0 4 * * 0 php /path/to/processpayments.php >> processpayments.log```
 
 This runs once a week (Sunday) and logs to processpayments.log.
 
