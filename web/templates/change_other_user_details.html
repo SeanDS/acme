@@ -1,0 +1,27 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Change Details</h2>
+				<h3>{$otherFirstName} {$otherLastName}'s Details</h3>
+				<form action="?do=changeotheruserdetails&amp;userid={$otherUserId}" method="post">
+					<fieldset>
+						<h3>Username</h3>
+						<label for="username">Username:&nbsp;</label>
+						<input type="text" name="username" id="username" value="{$otherUsername}" size="10"/>
+						<h3>First Name</h3>
+						<label for="firstname">First Name:&nbsp;</label>
+						<input type="text" name="firstname" id="firstname" value="{$otherFirstName}" size="10"/>
+						<h3>Last Name</h3>
+						<label for="lastname">Last Name:&nbsp;</label>
+						<input type="text" name="lastname" id="lastname" value="{$otherLastName}" size="10"/>
+						<h3>Starting Balance</h3>
+						<label for="startingbalance">Starting Balance:&nbsp;&#163;</label>
+						<input type="text" name="startingbalance" id="startingbalance" value="{$otherStartingBalance}" size="2"/>
+						<h3>Weekly Payment</h3>
+						<label for="weeklypayment">Weekly Payment:&nbsp;&#163;</label>
+						<input type="text" name="weeklypayment" id="weeklypayment" value="{$otherWeeklyPayment}" size="2"/>
+					</fieldset>
+					<br />
+					<input type="submit" value="Save"/>
+				</form>
+			</div>
+{include="footer"}

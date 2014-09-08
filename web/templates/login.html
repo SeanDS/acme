@@ -1,0 +1,17 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Login</h2>
+				<p>Greetings, prospective coffee recipient. Please enter your LDAP credentials below.</p>
+				{if="$badCredentials"}
+				<p class="highlighttext">The supplied username/password combination is invalid. Please try again.</p>
+				{/if}
+				<form action="?" method="post">
+					<label for="username">Username:&nbsp;</label>
+					<input type="text" name="username" id="username" /><br />
+					<label for="password">Password:&nbsp;</label>
+					<input type="password" name="password" id="password" /><br />
+					<input type="submit" value="Login" />
+				</form>
+				<p>If you wish to register with ACME, please obtain an LDAP account from your IT Administrator and then speak to the coffee manager.</p>
+			</div>
+{include="footer"}

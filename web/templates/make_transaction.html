@@ -1,0 +1,26 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Make Transaction</h2>
+				{if="$noCommentSupplied"}
+				<p class="highlighttext">Please enter a comment.</p>
+				{/if}
+				{if="$noAmountSupplied"}
+				<p class="highlighttext">Please enter an amount.</p>
+				{/if}
+				<form action="?do=maketransaction" method="post">
+					<label for="userid">Name:&nbsp;</label>
+					<select name="userid" id="userid">
+						{loop="$users"}
+						<option value="{$key}"{if="$key == $selectedUserId"} selected{/if}>{$value.firstname} {$value.lastname}</option>
+						{/loop}
+					</select>
+					<br />
+					<label for="comment">Comment:&nbsp;</label>
+					<input type="text" name="comment" id="comment" size="10" value="{$selectedComment}" /><br />
+					<label for="amount">Amount: £</label>
+					<input type="text" name="amount" id="amount" size="2" value="{$selectedAmount}" />
+					<label for="amount">(Positive amounts are credits, negative amounts are debits.)</label><br />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+{include="footer"}

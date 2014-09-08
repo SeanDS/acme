@@ -1,0 +1,43 @@
+{include="header"}
+			<div id="transactions">
+				<h2>View Transactions</h2>
+				<h3>{$userToView}'s Transactions</h3>
+				<p>Positive amounts are credits (<em>they are owed</em>), <span class="negativecurrency">negative amounts</span> are debits (<em>they owe</em>).</p>
+				{if="$currentBalance >= 0"}
+					<p class="highlighttext">{$userToView} is <strong>{function="format_currency($currentBalance)"}</strong> in credit.</p>
+				{else}
+					<p class="highlighttext">{$userToView} owes <strong>{function="format_currency($currentBalance)"}</strong>.</p>
+				{/if}
+				<table border="1">
+					<tr>
+						<th>Date</th>
+						<th>Transaction</th>
+						<th>Amount</th>
+						<th>New Balance</th>
+						<th>Actions</th>
+					</tr>
+					{if="count($transactions)"}
+					{loop="$transactions"}
+					<tr>
+						<td>{function="date('d-m-Y', $value.time)"}</td>
+						<td>{$value.comment}</td>
+						<td>{function="format_currency($value.amount)"}</td>
+						<td>{function="format_currency($value.runningbalance)"}</td>
+						<td>
+							<ul>
+								<li><a href="?do=removetransaction&amp;transactionid={$key}">Remove</a></li>
+							</ul>
+						</td>
+					</tr>
+					{/loop}
+					{/if}
+					<tr>
+						<td>Start</td>
+						<td>Initial Balance</td>
+						<td>{function="format_currency($startingBalance)"}</td>
+						<td>{function="format_currency($startingBalance)"}</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+{include="footer"}

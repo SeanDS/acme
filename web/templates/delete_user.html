@@ -1,0 +1,10 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Delete User</h2>
+				<p>Are you sure you wish to delete user <strong>{$userToDelete}</strong>? This will delete this user's account, transaction history and any scheduled coffee/doughnut weeks in the past or future.</p>
+				<form action="?do=deleteuser&amp;userid={$userIdToDelete}" method="post">
+					<input type="hidden" name="confirm" value="true" />
+					<input type="submit" value="Yes" />
+				</form>
+			</div>
+{include="footer"}

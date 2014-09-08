@@ -1,0 +1,10 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Remove Transaction</h2>
+				<p>Are you sure you wish to remove this transaction for user <strong>{$transactionFirstName} {$transactionLastName}</strong>?</p>
+				<form action="?do=removetransaction&amp;transactionid={$transactionId}" method="post">
+					<input type="hidden" name="confirm" value="true" />
+					<input type="submit" value="Yes" />
+				</form>
+			</div>
+{include="footer"}

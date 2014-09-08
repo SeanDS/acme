@@ -1,0 +1,169 @@
+body
+{
+	background: url('coffee_bean.svg');
+	background-size: 100%;
+	background-position: center middle;
+	background-repeat: no-repeat;
+}
+
+body a:all
+{
+	text-decoration: none;
+	padding: 1px;
+	color: inherit;
+}
+
+body a:hover
+{
+	background-color: #cccccc;
+	border-radius: 5px;
+}
+
+.negativecurrency
+{
+	color: red;
+}
+
+.smalltext
+{
+	font-size: 75%;
+}
+
+.highlighttext
+{
+	background-color: #999999;
+	border-radius: 15px;
+	padding: 5px 15px 5px 15px;
+}
+
+#content
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+#header
+{
+	background-color: #eeeeee;
+	border-radius: 15px;
+	padding: 5px 15px 15px 15px;
+	opacity: 0.9;
+}
+
+#header a
+{
+	color: black;
+	text-decoration: none;
+}
+
+#transactions
+{
+	background-color: #c0c0c0;
+	border-radius: 15px;
+	padding: 5px 15px 15px 15px;
+	margin: 5px 0 5px 0;
+	opacity: 0.9;
+}
+
+#transactions table
+{
+	background-color: #999999;
+	border-radius: 15px;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+	opacity: 1;
+}
+
+#transactions table tr th
+{
+	background-color: #cccccc;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+}
+
+#transactions table tr td
+{
+	background-color: #dddddd;
+	border-radius: 15px;
+	padding: 10px 15px 10px 15px;
+}
+
+#transactions table tr td ul
+{
+	padding: 2px 5px 2px 5px;
+}
+
+body ul a:visited
+{
+	color: blue;
+}
+
+#calendar
+{
+	background-color: #c0c0c0;
+	border-radius: 15px;
+	padding: 5px 15px 15px 15px;
+	margin: 5px 0 5px 0;
+	opacity: 0.9;
+}
+
+#calendar table
+{
+	background-color: #999999;
+	border-radius: 15px;
+	padding: 5px;
+	margin: 5px 0 5px 0;
+	opacity: 1;
+}
+
+#calendar table tr th
+{
+	background-color: #cccccc;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+	width: 13%;
+}
+
+#calendar table tr td.unselected
+{
+	background-color: #dddddd;
+	border-radius: 15px;
+	padding: 10px 15px 10px 15px;
+}
+
+#calendar table tr td.selected
+{
+	background-color: yellow;
+	border-radius: 15px;
+	padding: 10px 15px 10px 15px;
+}
+
+#calendar table tr td ul
+{
+	padding: 2px 5px 2px 5px;
+}
+
+#administration
+{
+	background-color: #c0c0c0;
+	border-radius: 15px;
+	padding: 5px 15px 15px 15px;
+	margin: 5px 0 5px 0;
+	opacity: 0.9;
+}
+
+#administration ul li a
+{
+	color: blue;
+	text-decoration: none;
+}
+
+#footer
+{
+	background-color: #eeeeee;
+	border-radius: 15px;
+	padding: 5px 15px 5px 15px;
+	opacity: 0.9;
+	font-size: 80%;
+}

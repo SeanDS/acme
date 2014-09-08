@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ACME: Coffee Management Evolved</title>
+		<meta name="description" content="The awesome Institute for Gravitational Research coffee management system">
+		<meta name="author" content="Sean Leavey">
+		<link rel="stylesheet" href="style.css">
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="content">
+			<div id="header">
+				<h1><a href="index.php">ACME: {$title}</a></h1>
+				<h4><em>Keeping the IGR caffeinated.</em></h4>
+{if="$loggedIn"}
+				<p>Welcome, {$firstName}.</p>
+{if="$rota[0] != 0 && $rota[1] != 0 && $rota[2] != 0"}
+				<p>Your next duty is on <strong>{function="date('jS F Y', mktime(0, 0, 0, $rota[1], $rota[0], $rota[2]))"}</strong> {if="$rota[3] == 1"}(Doughnuts){else}(Coffee){/if}</p>
+{else}
+				<p>You do not have any pending coffee or doughnut duties.</p>
+{/if}
+{/if}
+			</div>

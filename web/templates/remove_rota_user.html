@@ -1,0 +1,10 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Remove Rota User</h2>
+				<p>Are you sure you wish to remove {$rotaFirstName} {$rotaLastName}'s {if="$rotaType == 0"}coffee{else}doughnut{/if} duty on {$rotaDay}/{$rotaMonth}/{$rotaYear}?</p>
+				<form action="?do=removerotauser&amp;day={$rotaDay}&amp;month={$rotaMonth}&amp;year={$rotaYear}&amp;type={$rotaType}" method="post">
+					<input type="hidden" name="confirm" value="true" />
+					<input type="submit" value="Yes" />
+				</form>
+			</div>
+{include="footer"}

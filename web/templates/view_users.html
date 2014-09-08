@@ -1,0 +1,38 @@
+{include="header"}
+			<div id="transactions">
+				<h2>View Users</h2>
+				{if="count($users)"}
+				<table border="1" width="100%" style="font-size: 80%">
+					<tr>
+						<th>Username</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Last Login</th>
+						<th>Current Balance</th>
+						<th>Weekly Payment</th>
+						<th>Actions</th>
+					</tr>
+					{loop="$users"}
+					<tr>
+						<td>{$value.username}</td>
+						<td>{$value.firstname}</td>
+						<td>{$value.lastname}</td>
+						<td>{function="format_date($value.lastlogin)"}</td>
+						<td>{function="format_currency($value.balance)"}</td>
+						<td>{function="format_currency($value.weeklyPayment)"}</td>
+						<td>
+							<ul>
+								<li><a href="?do=maketransaction&amp;userid={$key}">Make Transaction</a></li>
+								<li><a href="?do=viewtransactions&amp;userid={$key}">View Transactions</a></li>
+								<li><a href="?do=changeotheruserdetails&amp;userid={$key}">Change Details</a></li>
+								<li><a href="?do=deleteuser&amp;userid={$key}">Remove</a></li>
+							</ul>
+						</td>
+					</tr>
+					{/loop}
+				</table>
+				{else}
+				<p>There are no users.</p>
+				{/if}
+			</div>
+{include="footer"}

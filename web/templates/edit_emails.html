@@ -1,0 +1,19 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Edit Emails</h2>
+				<form action="?do=editemails" method="post">
+					<h3>Coffee Email</h3>
+					<fieldset>
+					    <textarea name="coffeemail" rows="8" cols="50">{$coffeeMail}</textarea>
+					</fieldset>
+					<input type="submit" value="Save"/>
+				</form>
+				<form action="?do=editemails" method="post">
+					<h3>Doughnut Email</h3>
+					<fieldset>
+					    <textarea name="doughnutmail" rows="8" cols="50">{$doughnutMail}</textarea>
+					</fieldset>
+					<input type="submit" value="Save"/>
+				</form>
+			</div>
+{include="footer"}

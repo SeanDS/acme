@@ -1,0 +1,23 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Add User</h2>
+				<form action="?do=adduser" method="post">
+					<label for="username">LDAP Username: &nbsp;</label>
+					<select name="username" id="username">
+{loop="$users"}
+						<option value="{$value}">{$value}</option>
+{/loop}
+					</select><br />
+
+					<label for="firstname">First Name: &nbsp;</label>
+					<input type="text" name="firstname" id="firstname" size="10"/><br />
+					<label for="lastname">Last Name: &nbsp;</label>
+					<input type="text" name="lastname" id="lastname" size="10"/><br />
+					<label for="startingbalance">Starting Balance: £</label>
+					<input type="text" name="startingbalance" id="startingbalance" value="0.00" size="2"/><br />
+					<label for="weeklypayment">Weekly Payment: £</label>
+					<input type="text" name="weeklypayment" id="weeklypayment" value="1.50" size="2"/><br />
+					<input type="submit" value="Add User" />
+				</form>
+			</div>
+{include="footer"}

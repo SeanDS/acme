@@ -1,0 +1,34 @@
+{include="header"}
+			<div id="transactions">
+				<h2>Home</h2>
+				<p>What would you like to do?</p>
+				<ul>
+					<li><a href="?do=viewusertransactions">View Your Transactions</a></li>
+					{if="$isAdministrator"}
+					<li><a href="?do=viewusers">View Users</a></li>
+					<li><a href="?do=adduser">Add New User</a></li>
+					<li><a href="?do=maketransaction">Make Transaction</a></li>
+					<li><a href="?do=addrotauser">Add Rota User</a></li>
+					{/if}
+					<li><a href="?do=logout">Logout</a></li>
+				</ul>
+			</div>
+			<div id="calendar">
+				<h2>Calendar</h2>
+				<table border="1" style="width: 100%">
+					<caption>
+						<h3><a href="{$previousMonthLink}">&lt;</a>&nbsp;{$month}&nbsp;<a href="{$nextMonthLink}">&gt;</a></h3>
+					</caption>
+					<tr>
+						<th>Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+						<th>Saturday</th>
+						<th>Sunday</th>
+					</tr>
+					{$calendarDays}
+				</table>
+			</div>
+{include="footer"}
